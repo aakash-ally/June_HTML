@@ -1,12 +1,106 @@
-table,
-td,
-th,
-tr {
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 15px;
+body {
+  background-color: #54c3ef;
 }
-.high {
-  background-color: lightblue;
-  font-weight: bold;
+#back-to-homepage {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #fff748;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.pageh {
+  text-shadow: 2px 5px #2b3252;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  color: #fad744;
+  font-size: 90px;
+  font-family: "Caveat Brush";
+}
+footer {
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.main-card {
+  margin-left: 300px;
+  width: 70%;
+  background-color: white;
+  border-radius: 7px;
+  max-width: 1100px;
+  padding: 20px;
+  display: inline-block;
+}
+
+.left {
+  float: left;
+  width: 700px;
+}
+.images {
+  float: right;
+  width: 350px;
+  margin-left: 20px;
+  border-left: 1px solid black;
+  padding-left: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.numbers {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.views {
+  float: left;
+}
+
+.icons {
+  float: right;
+}
+
+.icons .fa {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.fa-heart-o:hover {
+  color: red;
+  cursor: hand;
+}
+
+.fa-comment-o:hover {
+  color: Green;
+  cursor: hand;
+}
+
+.fa-bookmark-o:hover {
+  color: red;
+  cursor: hand;
+}
+
+hr {
+  width: 100%;
+  float: center;
+}
+
+.image {
+  padding-bottom: 12px;
+  border: 2px solid grey;
+  width: 350px;
+  margin: 0px 5px 20px 5px;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.image h3 {
+  margin: 5px;
+}
+.image:hover {
+  border: 3px solid brown;
+}
+.image img {
+  width: 350px;
+  height: 170px;
 }

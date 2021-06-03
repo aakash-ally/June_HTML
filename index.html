@@ -1,66 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
+<head>
+  <title>Assignment1</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Caveat+Brush|Source+Sans+Pro:400,600,700&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  
+  <link rel="stylesheet" href="./index.css">
+</head>
+    <body>
+        <a id="back-to-homepage" href="../index.html">Back to Home</a>
+        <h1 class="pageh">The Video Player</h1>
+        <div class="main-card">
+          <div class="left">
+            <div class="video">
+              <video width="700" height="400" controls>
+                <source
+                  src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div class="numbers">
+                <div class="views">98.4k views</div>
+                <div class="icons">
+                  <i class="fa fa-heart-o" style="font-size: 30px"></i>
+                  <i class="fa fa-comment-o" style="font-size: 30px"></i>
+                  <i class="fa fa-bookmark-o" style="font-size: 30px"></i>
+                </div>
+              </div>
+            </div>
+            <div class="hsep">
+              <hr />
+            </div>
+            <div class="desc">
+              <div class="title">
+                <h1>Croissants | Flour and Stone</h1>
+              </div>
+              <div class="content">
+                There is no other way but to commit wholeheartedly to a
+                relationship with a croissant. We have all found ourselves at
+                the mercy of its allure. Here, in another epic film by the uber
+                talented Nathan Rodger, our Erin divulges her personal romance
+                with The Croissant.
+              </div>
+            </div>
+          </div>
+          <div class = "v1">
+          </div>
+          <div class="images">
+            <div class="image">
+              <img id ="1" src="https://i.vimeocdn.com/video/600595198_390x220.webp" />
+              <h3>Croissants | Flour and Stone</h3>
+            </div>
+            <div class="image">
+              <img id ="2" src="https://i.vimeocdn.com/video/604150056_390x220.webp" />
+              <h3>Perfect Mashed Potatoes and Gravy</h3>
+            </div>
+            <div class="image">
+              <img id ="3" src="https://i.vimeocdn.com/video/726986673_390x220.webp" />
+              <h3>The Heart of Soba</h3>
+            </div>
+            <div class="image">
+              <img id ="4" src="https://i.vimeocdn.com/video/570486309_390x220.webp" />
+              <h3>Grilled Cheese 9 Ways</h3>
+            </div>
+            <div class="image">
+              <img id ="5" src="https://i.vimeocdn.com/video/602705517_390x220.webp" />
+              <h3>Pineapple Cheesecake</h3>
+            </div>
+            <div class="image">
+              <img id ="6" src="https://i.vimeocdn.com/video/537261616_390x220.jpg" />
+              <h3>Lemony Chicken Noodle Soup</h3>
+            </div>
+            <div class="image">
+              <img id ="7" src="https://i.vimeocdn.com/video/608805594_590x332.jpg" />
+              <h3>Pumpkin Roll</h3>
+            </div>
+            <div class="image">
+              <img id ="8" src="https://i.vimeocdn.com/video/601730519_590x332.jpg" />
+              <h3>How to Brine a Turkey</h3>
+            </div>
+            <div class="image">
+              <img id ="9" src="https://i.vimeocdn.com/video/456852083_590x332.jpg" />
+              <h3>Stop Motion Dry-Brined Turkey Recipe</h3>
+            </div>
+            <div class="image">
+              <img id ="10" src="https://i.vimeocdn.com/video/600328152_590x332.jpg" />
+              <h3>Butternut Squash Ravioli</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>Footer</footer>
+    </body>
   </head>
-  <body>
-    <!-- <h1 style="color:red"> App</h1>
-    <p class="para" id="one"> hey there</p> -->
-    <table>
-      <tr style="text-align: left">
-        <th colspan="3" class="high">Invoice#12345ABC</th>
-        <th colspan="1" class="high">18 Jul 2019</th>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <b> Pay to:</b><br />
-          The Tech Park<br />
-          123 Willow Street <br />
-          Boulveard, LA-567892
-        </td>
-        <td colspan="2">
-          <b> Customer:</b><br />
-          John Lark<br />
-          Dummy Apartment<br />
-          276 Main Street <br />
-          Boulveard, LA-567892
-        </td>
-      </tr>
-      <tr>
-        <td class="high" colspan="1">Name/Description</td>
-        <td class="high" colspan="1">Qty</td>
-        <td class="high" colspan="1">MRP</td>
-        <td class="high" colspan="1">Amount</td>
-      </tr>
-      <tr>
-        <td>Biryani</td>
-        <td>3</td>
-        <td>400</td>
-        <td>1200</td>
-      </tr>
-      <tr>
-        <td>Chocolate Shake</td>
-        <td>3</td>
-        <td>200</td>
-        <td>600</td>
-      </tr>
-      <tr>
-        <td class="high" colspan="3">Subtotal:</td>
-        <td>1800</td>
-      </tr>
-      <tr>
-        <td class="high" colspan="2">Tax</td>
-        <td>10%</td>
-        <td>180</td>
-      </tr>
-      <tr>
-        <td class="high" colspan="3">Total:</td>
-        <td>1620</td>
-      </tr>
-    </table>
-  </body>
-</html>
+</head>
