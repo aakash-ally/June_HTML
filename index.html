@@ -4,96 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
     <title>Document</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css" />
+
+    <title>SHOPLANE - A place for shopping</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
   </head>
   <body>
-    <header class="head">
-      <div class="container">
-        <div class="logo"><img src="Stunning-Project/stunning-logo.png" /></div>
-        <div class="nav">
-          <div class="page"><div class="selected">Home</div></div>
-          <div class="page"><div class="unselected">About</div></div>
-          <div class="page"><div class="unselected">Blog</div></div>
-          <div class="page"><div class="unselected">Jobs</div></div>
+    <nav class="fixed-navbar">
+      <a class="navbar-brand" href="#"
+        ><h4><span class="naam">SHOP</span>LANE</h4></a
+      >
+
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="clothing">Clothings</a></li>
+        <li><a href="accessories">Accessories</a></li>
+      </ul>
+
+      <div class="icons">
+        <i class="fa fa-search"></i>
+        <div class="cart" id="cartIcon">
+          <a href="#">
+            <i class="fa fa-shopping-cart">
+              <span id="cart-count">0</span>
+            </i>
+          </a>
         </div>
-        <div class="account"><div class="box">Your Account</div></div>
+        <i class="fa fa-user-circle-o"></i>
       </div>
-    </header>
-    <div class="main">
-      <div class="left">
-        <div class="heading">Stunning Workplace<span>&#8228;</span></div>
-        <div class="subtext">
-          With Stunning, remote teams can organize projects, manage shifting
-          priorities, and get work done.
-        </div>
-        <div class="more-buttons">
-          <div class="new-acc">New Account</div>
-          <div class="upload">
-            <img src="Stunning-Project/arrow-up.png" alt="" />
-          </div>
-          <div class="download">
-            <img src="Stunning-Project/arrow-down.png" alt="" />
-          </div>
-        </div>
-        <div class="actions">
-          <div class="but">
-            <div class="but1">
-              <div class="tick2">
-                <img src="Stunning-Project/tick-gray.png" alt="" />
-              </div>
-              <div class="name">Dmm design</div>
-              <div class="prof">
-                <img src="Stunning-Project/user-pink.png" alt="" />
-              </div>
-              <div class="date">20 Dec</div>
-              <div class="weird" id="f">------</div>
-            </div>
-          </div>
-          <div class="but">
-            <div class="but2">
-              <div class="tick2">
-                <img src="Stunning-Project/tick-blue.png" alt="" />
-              </div>
-              <div class="name">Blurr animation</div>
-              <div class="prof">
-                <img src="Stunning-Project/user-orange.png" alt="" />
-              </div>
-              <div class="date">22 Dec</div>
-              <div class="weird" id="s">------</div>
-            </div>
-          </div>
-          <div class="but">
-            <div class="but1">
-              <div class="tick2">
-                <img src="Stunning-Project/tick-gray.png" alt="" />
-              </div>
-              <div class="name">Illustration</div>
-              <div class="prof">
-                <img src="Stunning-Project/user-blue.png" alt="" />
-              </div>
-              <div class="date">26 Dec</div>
-              <div class="weird" id="t">------</div>
-            </div>
-          </div>
-          <div class="but">
-            <div class="but1">
-              <div class="tick2">
-                <img src="Stunning-Project/tick-gray.png" alt="" />
-              </div>
-              <div class="name">Refunds</div>
-              <div class="prof">
-                <img src="Stunning-Project/user-red.png" alt="" />
-              </div>
-              <div class="date">28 Dec</div>
-              <div class="weird" id="c">------</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <img src="Stunning-Project/landing-section-image.png" />
-      </div>
-    </div>
+    </nav>
+
+    <section>
+      <h2 class="heading">Clothing for Men & Women</h2>
+      <div class="container" id="clothes"></div>
+    </section>
+
+    <section>
+      <h2 class="heading">Accessories for Men & Women</h2>
+      <div class="container" id="accessories"></div>
+    </section>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

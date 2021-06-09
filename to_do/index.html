@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>
+      <label> Add item</label>
+      <input id="new" placeholder="hey" />
+      <button id="add">Add it</button>
+    </span>
+    <div class="list" style="display: flex; flex-direction: column"></div>
+  </body>
+  <script>
+    let all_items = [];
+    const but = document.querySelector("#add");
+    const tas = document.querySelector("#new");
+    const lis = document.querySelector(".list");
+    but.addEventListener("click", (event) => {
+      let new_id = all_items.length + 1;
+      let task = tas.value;
+      new_item = { id: new_id, task: task };
+      all_items.push(new_item);
+      let item = document.createElement("div");
+      item.className = "item";
+      item.id = new_id;
+      let content = document.createElement("div");
+      content.className = "content";
+      let butt = document.createElement("button");
+      butt.className = "delete";
+      butt.addEventListener("click", (event) => {
+        all_items = all_items.filter((ta) => ta.id == new_id);
+        document.getElementById(new_id).remove();
+      });
+      content.textContent = `${task}`;
+      item.appendChild(content);
+      item.appendChild(butt);
+      lis.appendChild(item);
+    });
+  </script>
+</html>
