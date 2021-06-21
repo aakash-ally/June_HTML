@@ -1,0 +1,141 @@
+<head>
+    <title>Assignment1</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat+Brush|Source+Sans+Pro:400,600,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+   
+    <script>
+        $(document).ready(function(){
+            fetch('https://5d76bf96515d1a0014085cf9.mockapi.io/playlist')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                data.forEach(element => {
+                let srcc = element.thumbnail
+                let idd = Number(element.id)
+                $(".images").append(`<div class="image"><img id = "${idd}" src = "${srcc}"/> <h3>${element.title}</h3></div>`);
+                $(`#${idd}`).click(function(){
+                    
+                    fetch(`https://5d76bf96515d1a0014085cf9.mockapi.io/video/${idd}`)
+                    .then(res => res.json())
+                    .then(dat => {
+                        console.log(dat)
+                        // let uurl = `https://player.vimeo.com/video/${dat.vimeoId}`
+                        let uurl = "https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4"
+                        console.log(uurl)
+                        let video = $("#s1")[0]
+                        console.log(video)
+                        video.src = uurl
+                        // video.load()
+                        console.log("final ", video)
+                        
+                        // $("#s1").html('<source src = "'+uurl+'" type="video/mp4" id = "s1"')
+                        // $("#s1").get(0).play()
+                        $(".numbers .views").html(`${dat.views}`)
+                        $(".desc .title").html(`${dat.title}`)
+                        $(".desc .content").html(`${dat.description}`)
+                    })
+                })
+            });
+            })
+        });
+        
+    </script>
+  </head>
+      <body>
+          <a id="back-to-homepage" href="../index.html">Back to Home</a>
+          <h1 class="pageh">The Video Player</h1>
+          <div class="main-card">
+            <div class="left">
+              <div class="video">
+                <video width="700" height="400" controls>
+                  <source
+                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                    type="video/mp4"
+                    id = "s1"
+                  />
+                </video>
+                <div class="numbers">
+                  <div class="views">98.4k views</div>
+                  <div class="icons">
+                    <i class="fa fa-heart-o" style="font-size: 30px"></i>
+                    <i class="fa fa-comment-o" style="font-size: 30px"></i>
+                    <i class="fa fa-bookmark-o" style="font-size: 30px"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="hsep">
+                <hr />
+              </div>
+              <div class="desc">
+                <div class="title">
+                  <h1>Croissants | Flour and Stone</h1>
+                </div>
+                <div class="content">
+                  There is no other way but to commit wholeheartedly to a
+                  relationship with a croissant. We have all found ourselves at
+                  the mercy of its allure. Here, in another epic film by the uber
+                  talented Nathan Rodger, our Erin divulges her personal romance
+                  with The Croissant.
+                </div>
+              </div>
+            </div>
+            <div class = "v1">
+            </div>
+            <div class="images">
+              <!-- <div class="image">
+                <img id ="1" src="https://i.vimeocdn.com/video/600595198_390x220.webp" />
+                <h3>Croissants | Flour and Stone</h3>
+              </div>
+              <div class="image">
+                <img id ="2" src="https://i.vimeocdn.com/video/604150056_390x220.webp" />
+                <h3>Perfect Mashed Potatoes and Gravy</h3>
+              </div>
+              <div class="image">
+                <img id ="3" src="https://i.vimeocdn.com/video/726986673_390x220.webp" />
+                <h3>The Heart of Soba</h3>
+              </div>
+              <div class="image">
+                <img id ="4" src="https://i.vimeocdn.com/video/570486309_390x220.webp" />
+                <h3>Grilled Cheese 9 Ways</h3>
+              </div>
+              <div class="image">
+                <img id ="5" src="https://i.vimeocdn.com/video/602705517_390x220.webp" />
+                <h3>Pineapple Cheesecake</h3>
+              </div>
+              <div class="image">
+                <img id ="6" src="https://i.vimeocdn.com/video/537261616_390x220.jpg" />
+                <h3>Lemony Chicken Noodle Soup</h3>
+              </div>
+              <div class="image">
+                <img id ="7" src="https://i.vimeocdn.com/video/608805594_590x332.jpg" />
+                <h3>Pumpkin Roll</h3>
+              </div>
+              <div class="image">
+                <img id ="8" src="https://i.vimeocdn.com/video/601730519_590x332.jpg" />
+                <h3>How to Brine a Turkey</h3>
+              </div>
+              <div class="image">
+                <img id ="9" src="https://i.vimeocdn.com/video/456852083_590x332.jpg" />
+                <h3>Stop Motion Dry-Brined Turkey Recipe</h3>
+              </div>
+              <div class="image">
+                <img id ="10" src="https://i.vimeocdn.com/video/600328152_590x332.jpg" />
+                <h3>Butternut Squash Ravioli</h3>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <footer>Footer</footer>
+      </body>
+    </head>
+  </head>
