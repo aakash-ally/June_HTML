@@ -22,6 +22,8 @@
     <title>SHOPLANE - A place for shopping</title>
     <link rel="stylesheet" href="./index.css" />
     <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
   <body>
     <nav class="fixed-navbar">
@@ -48,16 +50,100 @@
       </div>
     </nav>
 
-    <section>
-      <h2 class="heading">Clothing for Men & Women</h2>
-      <div class="container" id="clothes"></div>
+    <section id="product">
+      <div class="left-column">
+        <img id="productImg" src="./img/placeholder.jpg" alt="" />
+      </div>
+      <div class="right-column">
+        <div class="product-description">
+          <h1 id="name">Product Name</h1>
+          <h4 id="brand">Product Barnd</h4>
+          <h3>Price: Rs <span id="price"></h3>
+          <div class="description">
+            <h3>Description</h3>
+            <p id="description">
+              Product Description
+            </p>
+          </div>
+          <div class="product-preview">
+            <h3>Product Preview</h3>
+            <div class="previewImg">
+                <!-- <img id="img0" class="active" src="./img/placeholder.jpg" alt="" />
+                <img id="img1" src="./img/placeholder.jpg" alt="" />
+                <img id="img2" src="" alt="" />
+                <img id="img3" src="" alt="" />
+                <img id="img4" src="" alt="" />
+                <img id="img5" src="" alt="" /> -->
+            </div>
+          </div>
+        </div>
+          <div class="btn">
+            <button id="add-to-cart">Add to Cart</button>
+          </div>
+      </div>
+      
     </section>
+    <footer>
+      <ul class="online-store">
+        <li><h3>Online Store</h3></li>
+        <li><a href="#">Men Clothing</a></li>
+        <li><a href="#">Women Clothing</a></li>
+        <li><a href="#">Men Accessories</a></li>
+        <li><a href="#">Women Accessories</a></li>
+      </ul>
+      <ul class="helpful-links">
+        <li><h3>Helpful Links</h3></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="patners">
+        <li><h3>Patners</h3></li>
+        <li><a href="#">Zara</a></li>
+        <li><a href="#">Pantaloons</a></li>
+        <li><a href="#">Levis</a></li>
+        <li><a href="#">Ucb</a></li>
+        <li><a href="#">+ Many More</a></li>
+      </ul>
+      <ul class="address">
+        <li><h3>Address</h3></li>
+        <li>Building 101</li>
+        <li>Central Avenue</li>
+        <li>LA - 902722</li>
+        <li>United States</li>
+      </ul>
+    </footer>
 
-    <section>
-      <h2 class="heading">Accessories for Men & Women</h2>
-      <div class="container" id="accessories"></div>
-    </section>
-    <script src="./data.js"></script>
-    <script src="./index.js"></script>
+<script src="./data.js"></script>
+    <script>
+      $(document).ready(function(){
+        console.log(productData);
+        $("#description").html(`${productData.description}`);
+        $("#price").html(`${productData.price}`);
+        $("#brand").html(`${productData.brand}`);
+        $("#name").html(`${productData.name}`);
+        $("#productImg").attr("src", `${productData.preview}`);
+        $("#add-to-cart").click(function(){
+          let x = Number($("#cart-count").html()) + 1;
+          $("#cart-count").html(`${x}`)
+        })
+        for(let i=0;i<productData.photos.length;i++){
+          $(".previewImg").append(`<img id="img${i}" src= "${productData.photos[i]}">`);
+          if(i==0){
+            $(`#img${i}`).addClass("active");
+          }
+
+          $(`#img${i}`).click(function(){
+            $("#productImg").attr("src", `${productData.photos[i]}`);
+            $(`#img${i}`).addClass("active");
+            for(j=0;j<productData.photos.length;j++){
+              $(`#img${j}`).removeClass("active");
+            }
+            $(`#img${i}`).addClass("active");
+          })
+        }
+      });
+    </script>
+    
   </body>
 </html>
