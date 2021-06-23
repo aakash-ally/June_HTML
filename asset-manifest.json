@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/June_HTML/reactsstuff/my-app/static/css/main.d685fe32.chunk.css",
+    "main.js": "/June_HTML/reactsstuff/my-app/static/js/main.47514a86.chunk.js",
+    "main.js.map": "/June_HTML/reactsstuff/my-app/static/js/main.47514a86.chunk.js.map",
+    "runtime-main.js": "/June_HTML/reactsstuff/my-app/static/js/runtime-main.0b7e5065.js",
+    "runtime-main.js.map": "/June_HTML/reactsstuff/my-app/static/js/runtime-main.0b7e5065.js.map",
+    "static/js/2.52fa4d77.chunk.js": "/June_HTML/reactsstuff/my-app/static/js/2.52fa4d77.chunk.js",
+    "static/js/2.52fa4d77.chunk.js.map": "/June_HTML/reactsstuff/my-app/static/js/2.52fa4d77.chunk.js.map",
+    "static/js/3.dda2f1c4.chunk.js": "/June_HTML/reactsstuff/my-app/static/js/3.dda2f1c4.chunk.js",
+    "static/js/3.dda2f1c4.chunk.js.map": "/June_HTML/reactsstuff/my-app/static/js/3.dda2f1c4.chunk.js.map",
+    "index.html": "/June_HTML/reactsstuff/my-app/index.html",
+    "static/css/main.d685fe32.chunk.css.map": "/June_HTML/reactsstuff/my-app/static/css/main.d685fe32.chunk.css.map",
+    "static/js/2.52fa4d77.chunk.js.LICENSE.txt": "/June_HTML/reactsstuff/my-app/static/js/2.52fa4d77.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b7e5065.js",
+    "static/js/2.52fa4d77.chunk.js",
+    "static/css/main.d685fe32.chunk.css",
+    "static/js/main.47514a86.chunk.js"
+  ]
+}
